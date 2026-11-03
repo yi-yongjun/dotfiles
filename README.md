@@ -23,7 +23,7 @@ dotfiles/
 ## Install
 
 ```sh
-git clone https://github.com/joyful0920/dotfiles.git ~/dotfiles
+git clone https://github.com/yi-yongjun/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
 
