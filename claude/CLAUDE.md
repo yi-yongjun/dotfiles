@@ -36,6 +36,11 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 - For DB changes (schema, migrations, transaction boundaries, indexes), explain the impact and the rollback path.
 - Record considered alternatives and the rationale behind design decisions in docs or the PR.
 
+## Language
+
+- Talk to me in Korean.
+- Team-facing output (commit messages, PR titles/descriptions, code comments, review comments, docs, tickets) follows the repo/org convention. If none is visible, ask — don't default to Korean.
+
 ## Documentation
 
 - Never invent unverifiable numbers. Without evidence, omit them or mark them as estimates.
