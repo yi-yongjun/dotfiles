@@ -84,7 +84,12 @@
       "Read(~/.gem/credentials)",
       "Read(~/Library/Keychains/**)",
       "Read(**/.env)",
-      "Read(**/.env.*)"
+      "Read(**/.env.*)",
+      "Read(**/*.keystore)",
+      "Read(**/*.jks)",
+      "Read(**/*.p8)",
+      "Read(**/*.p12)",
+      "Read(**/*.mobileprovision)"
     ]
   },
   "model": "fable[1m]",
@@ -170,7 +175,12 @@
         "~/.gem/credentials",
         "~/Library/Keychains/**",
         "**/.env",
-        "**/.env.*"
+        "**/.env.*",
+        "**/*.keystore",
+        "**/*.jks",
+        "**/*.p8",
+        "**/*.p12",
+        "**/*.mobileprovision"
       ]
     },
     "excludedCommands": [
