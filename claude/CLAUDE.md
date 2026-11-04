@@ -31,7 +31,7 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 
 ## Code Principles
 
-- TypeScript is strict by default. No `any`; when unavoidable, leave a comment explaining why.
+- TypeScript: follow the repo's compiler/lint strictness. In new code, avoid `any`; when unavoidable, leave a comment explaining why.
 - Never swallow errors. Log with context and convert them into meaningful exceptions.
 - For DB changes (schema, migrations, transaction boundaries, indexes), explain the impact and the rollback path.
 - Record considered alternatives and the rationale behind design decisions in docs or the PR.
