@@ -16,6 +16,7 @@
       "Bash(git remote show*)",
       "Bash(git remote get-url*)",
       "Bash(git fetch*)",
+      "Bash(git pull*)",
       "Bash(git rev-parse*)",
       "Bash(git ls-files*)",
       "Bash(git grep*)",
@@ -191,9 +192,6 @@
       "git pull *",
       "git fetch *",
       "git clone *",
-      "git -C * push *",
-      "git -C * pull *",
-      "git -C * fetch *",
       "gh *",
       "ssh *"
     ]
