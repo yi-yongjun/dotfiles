@@ -65,7 +65,8 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 - Never put secrets, tokens, or personal data into code, logs, or commits.
 - Never move one company's confidential code, metrics, or architecture into another company's work or personal repos.
 - Don't guess library APIs or version-specific behavior. Check the code/docs or say you're unsure.
-- Sandbox-excluded commands (gh, git push/fetch) must be the first word of the command: no cd prefix, no pipe. GUI launches (`open`, simulators) are blocked in the sandbox; give me the exact command to run with `!` instead.
+- Commands in `sandbox.excludedCommands` (global settings and the project's `.claude/settings.local.json`, e.g. `git push/pull/fetch`, `gh`, `yarn workspace <pkg> test`) skip the sandbox only when run as the bare command: no `cd … &&` prefix, no `2>&1`, no `| tail`/`| head`. Check those files before running tests. In auto mode a sandboxed failure cannot be retried outside the sandbox, so get the form right the first time.
+- GUI launches (`open`, simulators) are blocked in the sandbox; give me the exact command to run with `!` instead.
 
 ## Feedback
 
