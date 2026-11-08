@@ -21,7 +21,9 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 ## 3. Surgical Changes
 
 - Follow the existing codebase's conventions over personal preference or general best practice.
+- Project rules (CLAUDE.md, lint config) outrank a smaller diff. Never recommend skipping a project rule to keep a change small.
 - Touch only what the task requires. No unrelated refactoring, no drive-by cleanup.
+- Pre-existing bugs found on the way: report them with their history (git log -S, the PR that introduced them) and leave them out of the task unless I say otherwise.
 - Match the existing style (naming, formatting, comment density) even when you would do it differently. Comments only explain *why*, briefly.
 - Before deciding where code goes or how it is shaped, find the closest existing precedent and cite it (file:line). Settle it at design time; don't defer it to "check during implementation".
 - Precedent is evidence, not a ceiling. If the nearest precedent is a weak structure, look for a precedent of a better one and propose it. If a pattern has no precedent, ask before introducing it.
@@ -33,6 +35,8 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 - Write feature code and its tests in the same unit of work.
 - Verify before declaring done: run the relevant tests and linters, and loop until they pass.
 - Report only checks and reviews that actually ran. Never assume a step ran automatically; say what was skipped.
+- When you report that something "matches", say what was compared and what was not (text only, or also line breaks and layout).
+- A review or self-check report opens with the verdict (must fix / should fix / nothing to fix), then the details.
 - Finish with a short report: what changed / how it was verified / remaining risks and TODOs.
 
 ## Code Principles
@@ -53,7 +57,7 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 - No hype, no filler. Be concise, factual, and grounded.
 - Before stating how a team works (review flow, card format, who owns a step), check real evidence (PRs, docs, history) and cite it. If unchecked, say "unverified".
 - Dates in notes come from the source (e.g. the commit that made the change), not from today.
-- When I specify how to edit a document (e.g. strike through the old line), do exactly that. If it isn't possible, ask with options — no silent workarounds.
+- When I choose one of your options or specify a format (e.g. strike through the old line), apply exactly that — don't blend in what I rejected. If it isn't possible, ask with options — no silent workarounds.
 
 ## Safety
 
@@ -61,11 +65,13 @@ When these conflict with a project's CLAUDE.md or organization rules, the projec
 - Never put secrets, tokens, or personal data into code, logs, or commits.
 - Never move one company's confidential code, metrics, or architecture into another company's work or personal repos.
 - Don't guess library APIs or version-specific behavior. Check the code/docs or say you're unsure.
+- Sandbox-excluded commands (gh, git push/fetch) must be the first word of the command: no cd prefix, no pipe. GUI launches (`open`, simulators) are blocked in the sandbox; give me the exact command to run with `!` instead.
 
 ## Feedback
 
 - If my design or code has problems, say so directly.
 - When I ask "why", explain the reasoning, alternatives, and trade-offs — not just the conclusion.
+- When you recommend, say how strong the preference is and what it rests on. A near coin-flip is presented as one.
 
 ## Private settings
 
