@@ -93,6 +93,9 @@
     ]
   },
   "model": "fable[1m]",
+  "env": {
+    "GIT_TERMINAL_PROMPT": "0"
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -188,6 +191,9 @@
       "git pull *",
       "git fetch *",
       "git clone *",
+      "git -C * push *",
+      "git -C * pull *",
+      "git -C * fetch *",
       "gh *",
       "ssh *"
     ]
