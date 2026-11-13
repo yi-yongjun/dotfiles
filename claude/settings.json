@@ -162,11 +162,7 @@
       "allowLocalBinding": true
     },
     "filesystem": {
-      "allowWrite": [
-        "~/.cache/**",
-        "~/Library/Caches/**",
-        "**/.claude/**"
-      ],
+      "allowWrite": ["~/.cache/**", "~/Library/Caches/**", "**/.claude/**"],
       "denyRead": [
         "~/.ssh/**",
         "~/.gnupg/**",
@@ -196,6 +192,7 @@
       "git pull *",
       "git fetch *",
       "git clone *",
+      "git commit *",
       "gh *",
       "ssh *"
     ]

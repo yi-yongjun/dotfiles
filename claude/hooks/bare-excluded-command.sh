@@ -14,7 +14,7 @@ cmd=$(printf '%s' "$raw" | /usr/bin/perl -0pe '
     s/"(?:\\.|[^"\\])*"/Q/g;
 ')
 
-heads='git (push|pull|fetch|clone)|gh|ssh|yarn (workspace [^[:space:]]+ test|test(:unit)?|jest)'
+heads='git (push|pull|fetch|clone|commit)|gh|ssh|yarn (workspace [^[:space:]]+ test|test(:unit)?|jest)'
 
 # Does an excluded command appear at a command position?
 if ! printf '%s' "$cmd" | grep -qE "(^|[;&|(][[:space:]]*)[[:space:]]*(${heads})([[:space:]]|$)"; then
